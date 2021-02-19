@@ -147,7 +147,7 @@ def getBooksByAuthor(catalog, authorname):
     posauthor = lt.isPresent(catalog['authors'], authorname)
     if posauthor > 0:
         author = lt.getElement(catalog['authors'], posauthor)
-        return author
+        return author 
     return None
 
 
@@ -201,7 +201,14 @@ def sortBooks(catalog, size):
     sub_list = lt.subList(catalog['books'], 0, size)
     sub_list = sub_list.copy()
     start_time = time.process_time()
+<<<<<<< HEAD
     sorted_list= sa.sort(sub_list, compareratings)
     stop_time = time.process_time()
     elapsed_time_mseg = (stop_time - start_time)*1000
     return elapsed_time_mseg, sorted_list
+=======
+    sorted_list = sa.sort(sub_list, compareratings)
+    stop_time = time.process_time()
+    elapsed_time_mseg = (stop_time - start_time)*1000
+    return elapsed_time_mseg,sorted_list
+>>>>>>> b4a74e61c486f9f44bc97cc5171c1fbe5d4922eb
